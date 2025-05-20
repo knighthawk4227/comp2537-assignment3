@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon page </title>
+  <link rel="stylesheet" href="style.css">
+  <!-- import jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="buttons">
+    <button class="easy diffButton"> EASY Mode</button>
+    <button class="medium diffButton"> Medium Mode</button>
+    <button class="hard diffButton"> Hard Mode </button>
+  </div>
+
+  <div class="resetButton">
+    <button id="reset">Reset</button>
+  </div>
+
+  <div class="theme">
+    <button id="darkMode">Theme</button>
+  </div>
+
+  <div class="informationBox">
+    <p class="clickDisplay">0</p>
+    <p id="timer">0:00</p>
+  </div>  
+
+  <div id="game_grid">
+  </div>
+  
+  <div class="pairInfo">
+    <p id="pairCount">pairs Matched: 0</p>
+    <p class="totalPair">Total Pairs: </p>
+    <p id="pairLeft">Pairs left: </p>
+  </div>
+    <template class="card-template">
+      <div class="card">
+        <img id="img" class="front_face" src="" alt="">
+        <img class="back_face" src="back.webp" alt="">
+      </div>
+    </template>
+
+  <script src="card.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

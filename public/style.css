@@ -1,0 +1,130 @@
+body {
+  margin: 0px;
+  background-color: white;
+}
+
+#game_grid {
+  border: 2px tomato solid;
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  margin-top: 0rem;
+  margin-bottom: 0;
+  display: none;
+  flex-wrap: wrap;
+}
+
+#game_grid.medium .card {
+  width: 23%;
+}
+
+#game_grid.hard .card {
+  width: 23%;
+}
+
+#game_grid.hard {
+  
+  height: 700px;
+}
+
+
+.card {
+  width: 33.3%;
+  position: relative;
+  transition: transform 1s;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card.matched {
+  pointer-events: none;
+}
+
+
+img {
+  width: 100%
+}
+
+.front_face,
+.back_face {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+
+.front_face {
+  transform: rotateY(180deg);
+}
+
+
+#timer {
+  border: 2px tomato solid;
+  font-size: 2rem;
+  width: 125px;
+  height: 60px;
+  margin: auto;
+  color: blue;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clickDisplay {
+  color: blue;
+  border: 2px tomato solid;
+  font-size: 2rem;
+  width: 125px;
+  height: 60px;
+  margin: auto;
+  margin-top: 2rem;
+  display: flex; 
+}
+
+.informationBox {
+  color: blue;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 0;
+  margin-top: 2 rem
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+button {
+  font-size: 1rem;
+}
+
+.resetButton {
+  display: none;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pairInfo {
+  color: blue;
+  display: none;
+  justify-content: center; 
+  align-items: center;
+  gap: 8rem;
+  font-size: 3rem;
+  margin-top: 2 rem
+}
+
+.theme {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem
+}
