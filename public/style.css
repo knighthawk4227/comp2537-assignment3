@@ -106,10 +106,14 @@ button {
 }
 
 .resetButton {
-  display: none;
+  display: flex;
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
+}
+
+#reset {
+  display: none;
 }
 
 .pairInfo {
