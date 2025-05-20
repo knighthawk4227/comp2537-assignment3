@@ -15,7 +15,6 @@ function diff() {
     let grid = document.getElementById('game_grid');
     let but = document.querySelectorAll('.diffButton');
     let allButton = document.querySelector('.buttons');
-    let resetButton = document.querySelector('.resetButton');
     let pairInfo = document.querySelector('.pairInfo');
 
     but.forEach((button) => {
@@ -38,7 +37,6 @@ function diff() {
           difficulty = 8;
         }
         allButton.style.display = 'none';
-        resetButton.style.display = 'flex';
         pairInfo.style.display = 'flex';
         resolve(difficulty);
       })
@@ -51,7 +49,9 @@ async function loadPokemon(difficulty) {
   let start = Math.random()*1000 + 1;
   let poke = [];
   let response = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${start}&limit=${difficulty}`);
+  let resetButton = document.querySelector('.resetButton');
   let jsonObj = await response.json();
+  resetButton.style.display = 'flex';
   console.log(jsonObj);
 
   for (let i = 0; i < jsonObj.results.length; i++) {
